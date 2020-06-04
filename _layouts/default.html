@@ -15,7 +15,7 @@
         <h1>Speechwriting</h1>
       </div>
     </header>
-    <a class="postslink" href="{{'/sessions' | relative_url}}">See Previous Sessions</a>
+    <a onclick="randomize()" class="randomizer">Randomize Prompt</a>
     <div class="menu-wrapper">
       <div class="people">
         {% for person in site.data.people %}

@@ -46,6 +46,27 @@ function assign(e){
   e.id = e.dataset.type+"-active";
 }
 
+function randomize(){
+  var i,j,i_rand,j_rand;
+
+  Array.from(document.getElementsByClassName("person")).forEach(i => i.removeAttribute("id"));
+  Array.from(document.getElementsByClassName("prompt")).forEach(i => i.removeAttribute("id"));
+
+
+  i = Array.from(document.getElementsByClassName("person"));
+  j = Array.from(document.getElementsByClassName("prompt"));
+
+  i_rand = Math.floor(Math.random()*(i.length-1));
+  j_rand = Math.floor(Math.random()*(j.length-1));
+
+  j[j_rand].id = j[j_rand].dataset.type+"-active";
+  i[i_rand].id = i[i_rand].dataset.type+"-active";
+
+  j[j_rand] = j[j_rand].scrollIntoView(false);
+  i[i_rand] = i[i_rand].scrollIntoView(false);
+
+}
+
 function download(){
   pause();
   var person,prompt;
