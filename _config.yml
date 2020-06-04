@@ -1,5 +1,5 @@
 site: "Speechwriting Practice"
-baseurl: ""
+baseurl: "speechwriting"
 url: https://joshuafayer.com/
 permalink: /:title/
 sass:
