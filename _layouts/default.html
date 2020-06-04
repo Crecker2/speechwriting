@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}}</title>
+
+    {% include general.html %}
+
+
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Speechwriting</h1>
+      </div>
+    </header>
+    <a class="postslink" href="{{'/sessions' | relative_url}}">See Previous Sessions</a>
+    <div class="menu-wrapper">
+      <div class="people">
+        {% for person in site.data.people %}
+          <a onclick="assign(this)" data-type="person" class="listitem person">{{person.name}}</a>
+        {% endfor %}
+          <a onclick="assign(this)" data-type="person" class="listitem person"><input type="text" value=""></a>
+      </div>
+      <div class="prompts">
+        {% for prompt in site.data.prompts %}
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">{{prompt.subject}}</a>
+        {% endfor %}
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt"><input type="text" value=""></a>
+      </div>
+    </div>
+    <div id="countdown">
+      30:00
+    </div>
+    <button onclick="start()" id="startbutton" spellcheck>Begin</button>
+
+    <div class="titlewrapper">
+      <input type="text" name="title" id="title" value="">
+    </div>
+    <textarea type="text" id="textenter" name="text" value=""></textarea>
+
+    <div class="metadata">
+      <p id="wordcount">0 words</p>
+      <p id="charactercount">0 characters</p>
+    </div>
+
+
+    <button type="button" onclick="download()" id="download" name="download">Download</button>
+
+    <script src="js/scripts.js" charset="utf-8"></script>
+  </body>
+</html>

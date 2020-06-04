@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speechwriting Practice</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/stylesheet.css">
+<script src="/js/FileSaver.js" charset="utf-8"></script>
+
+
+
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Speechwriting</h1>
+      </div>
+    </header>
+    <a class="postslink" href="/sessions">See Previous Sessions</a>
+    <div class="menu-wrapper">
+      <div class="people">
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Joe Biden</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Bernie Sanders</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Hillary Clinton</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Cory Booker</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Kamala Harris</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Beto O'Rourke</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Barack Obama</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Elizabeth Warren</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person">Julián Castro</a>
+        
+          <a onclick="assign(this)" data-type="person" class="listitem person"><input type="text" value=""></a>
+      </div>
+      <div class="prompts">
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Climate Change</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Gun Control</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">School Prayer</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Social Security</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Abortion</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Reparations</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Education</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Economic Inequality</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Police Reform</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt">Minimum wage</a>
+        
+          <a onclick="assign(this)" data-type="prompt" class="listitem prompt"><input type="text" value=""></a>
+      </div>
+    </div>
+    <div id="countdown">
+      30:00
+    </div>
+    <button onclick="start()" id="startbutton" spellcheck>Begin</button>
+
+    <div class="titlewrapper">
+      <input type="text" name="title" id="title" value="">
+    </div>
+    <textarea type="text" id="textenter" name="text" value=""></textarea>
+
+    <div class="metadata">
+      <p id="wordcount">0 words</p>
+      <p id="charactercount">0 characters</p>
+    </div>
+
+
+    <button type="button" onclick="download()" id="download" name="download">Download</button>
+
+    <script src="js/scripts.js" charset="utf-8"></script>
+  </body>
+</html>

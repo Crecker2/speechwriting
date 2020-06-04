@@ -1,0 +1,132 @@
+body {
+  padding: 25px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+header h1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.postslink {
+  color: #48b12f;
+  text-decoration: underline;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.menu-wrapper {
+  display: block;
+  width: 530px;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+.menu-wrapper .people, .menu-wrapper .prompts {
+  width: 250px;
+  display: inline-block;
+  padding: 5px;
+  height: 100px;
+  overflow-y: scroll;
+  border: 1px solid #222;
+}
+.menu-wrapper .people .listitem, .menu-wrapper .prompts .listitem {
+  display: block;
+  cursor: pointer;
+}
+.menu-wrapper .people .listitem input, .menu-wrapper .prompts .listitem input {
+  font-family: inherit;
+  background: none;
+}
+.menu-wrapper .people .listitem:hover, .menu-wrapper .prompts .listitem:hover {
+  background-color: #efefef;
+}
+.menu-wrapper .people .listitem#person-active, .menu-wrapper .prompts .listitem#person-active {
+  background-color: #efefef;
+}
+.menu-wrapper .people .listitem#prompt-active, .menu-wrapper .prompts .listitem#prompt-active {
+  background-color: #efefef;
+}
+
+@media (max-width: 768px) {
+  .menu-wrapper {
+    width: 80%;
+  }
+  .menu-wrapper .people, .menu-wrapper .prompts {
+    display: block;
+    margin: 5px auto;
+  }
+}
+#countdown, #startbutton, #download {
+  font-family: sans-serif;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 48px;
+}
+
+#startbutton, #download {
+  font-size: 20px;
+  outline: none;
+  border: none;
+  margin: 15px auto;
+  background-color: #70d059;
+  color: #fff;
+  font-weight: bold;
+  padding: 25px 45px;
+  cursor: pointer;
+}
+#startbutton.active, #download.active {
+  background-color: #ff6d6d;
+  color: #fff;
+  animation-name: active;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes active {
+  0% {
+    box-shadow: 0px 0px 0px #ff6d6d;
+  }
+  100% {
+    box-shadow: 0px 0px 100px rgba(255, 109, 109, 0);
+  }
+}
+#download {
+  background-color: #444;
+  margin: 5px 0px;
+}
+
+.titlewrapper {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.titlewrapper input {
+  padding: 15px;
+  width: 85%;
+  display: block;
+  margin: 15px auto;
+  border: none;
+  border-bottom: 1px #222 solid;
+  font-size: 30px;
+  font-family: inherit;
+}
+
+#textenter {
+  outline: none;
+  border: 1px solid #888;
+  display: block;
+  margin: 45px auto;
+  margin-top: 5px;
+  padding: 25px;
+  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  width: 80%;
+  max-width: 1200px;
+  min-height: 500px;
+  caret-color: #70d059;
+}

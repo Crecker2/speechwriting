@@ -1,0 +1,12 @@
+site: "Speechwriting Practice"
+baseurl: ""
+url: https://joshuafayer.com/
+permalink: /:title/
+sass:
+  style: expanded
+collections:
+  posts:
+    output: true
+    permalink: /sessions/:title
+plugins:
+  - jekyll-sitemap
